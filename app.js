@@ -5,6 +5,8 @@ new Vue({
     data:{
         name: 'zia',
         job: 'Junior Developer',
+        gitlink: 'https://github.com/sunzid02/',
+        web: '<a href = "https://github.com/sunzid02/">PUTA</a>'
     },
 
     //all functions
