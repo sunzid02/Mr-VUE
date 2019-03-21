@@ -26,7 +26,7 @@
 
             <h1>EVENTs</h1>
 
-            <button @click="add(1)">
+            <button @click.once="add(1)">
                 Add a year
             </button>
 
@@ -48,6 +48,9 @@
                 {{ x }}, {{ y }}
             </div>
 
+            <br>
+            <!-- tutorial 6 -->
+            <a  @click.prevent="click" href="https://www.youtube.com/">Youtube</a>
     </div>
 
 
