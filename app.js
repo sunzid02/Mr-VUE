@@ -35,6 +35,14 @@ new Vue({
       updateXY:function(event) {
           this.x = event.offsetX;
           this.y = event.offsetY;
+      },
+
+      click:function() {
+        alert("youtube a ja");  
+      },
+
+      logName:function() {
+          console.log("U typed your name");
       }
 
     }
