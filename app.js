@@ -41,5 +41,9 @@ new Vue({
         alert("youtube a ja");  
       },
 
+      logName:function() {
+          console.log("U typed your name");
+      }
+
     }
 })
