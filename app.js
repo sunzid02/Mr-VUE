@@ -10,6 +10,7 @@ new Vue({
         age: 24,
         x:0,
         y:0,
+        write:'',
     },
 
     //all functions
