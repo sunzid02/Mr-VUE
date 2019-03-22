@@ -12,14 +12,26 @@
 
     <div id='vue-app'>
 
-        <h1>Conditionals</h1>
-        <button @click="error = !error">Toggle Error</button>
-        <button @click="success = !success">Toggle Success</button>
+        <h1>Looping with v-for</h1>
+         
+        <ul>
+            <li v-for="character in characters">
+                {{ character }}
+            </li>
+        </ul>
 
-        <!-- <p v-if="error"> We found some error </p>
-        <p v-else-if="success"> We found some success </p> -->
-        <p v-show="error">Toggle Error </p>
-        <p v-show="success">Toggle success </p>
+        <ul>
+            <li v-for="(ninja, index) in ninjas">
+                {{ index }} . {{ ninja.name }}
+            </li>
+        </ul>
+        
+        <template v-for="ninja in ninjas">
+            <div v-for="(val, key) in ninja">
+                {{ key }} - {{ val }}
+            </div>
+        </template>
+
     </div>
 
 
