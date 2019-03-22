@@ -14,8 +14,17 @@
 
         <h1>10. Dynamic CSS Classes</h1>
 
-        
+        <h2>Example 1</h2>
+        <!-- <div v-on:click="available = !available" v-bind:class="{available: available}">
+            <span>Ryu</span>
+        </div> -->
 
+        <h2>Example 2</h2>
+        <button @click="nearby = !nearby" > Toggle nearby</button>
+        <button @click="available = !available">Toggle available</button>
+        <div v-bind:class="compClasses">
+            <span>Ryu</span>
+        </div>
         <br><br>
 
         <!-- Computed properties: runs what shoud run, not like function, function runs all -->
