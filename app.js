@@ -3,9 +3,14 @@ new Vue({
     el:"#vue-app",
     
     data:{
-        error: false,
-        success: false,
-    },
+        characters: ['Mario', 'Zuna', 'Pur'],
+        ninjas:[
+            { name: 'Zia', age: 24},
+            { name: 'Rak', age: 25},
+            { name: 'Rup', age: 26}
+        ],
+
+    }, 
 
     //all functions
     methods:{
