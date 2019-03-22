@@ -12,90 +12,14 @@
 
     <div id='vue-app'>
 
-        <h1>10. Dynamic CSS Classes</h1>
+        <h1>Conditionals</h1>
+        <button @click="error = !error">Toggle Error</button>
+        <button @click="success = !success">Toggle Success</button>
 
-        <h2>Example 1</h2>
-        <!-- <div v-on:click="available = !available" v-bind:class="{available: available}">
-            <span>Ryu</span>
-        </div> -->
-
-        <h2>Example 2</h2>
-        <button @click="nearby = !nearby" > Toggle nearby</button>
-        <button @click="available = !available">Toggle available</button>
-        <div v-bind:class="compClasses">
-            <span>Ryu</span>
-        </div>
-        <br><br>
-
-        <!-- Computed properties: runs what shoud run, not like function, function runs all -->
-        <h1>9. Computed Properties</h1>
-        <button @click='a++'>Add to A</button>
-        <button @click='b++'>Add to B</button>
-        <p>A = {{ a }}</p>
-        <p>B = {{ b }}</p>
-
-        <p>Fruit + A = {{ addToA }}</p>
-        <p>Fruit + B = {{ addToB }}</p>
-
-        <br><br>
-
-
-        <!-- two way data binding -->
-        <h1>8. Two way data binding</h1>
-        <input type="text" value="" placeholder="write ..." v-model="write">
-        <span> {{ write }} </span>
-
-        <br><br>
-
-        <h1>1-7. Hello {{ name }}</h1>
-        <h1> {{ greet('night') }}</h1>
-        <h1> {{ addition(10,440) }}</h1>
-
-        <!-- <h1>
-            <input type="text" name="" id="" v-bind:value="greet('j')">
-            Git link: <a :href="gitlink">GIT</a> -->
-            
-            <!-- html render -->
-            <!-- <p v-html="web">YO</p>
-        </h1> -->
-        <br><br>
-
-        <h1>EVENTs</h1>
-
-        <button @click.once="add(1)">
-            Add a year
-        </button>
-
-        <button v-on:click="subtract(1)">
-            Subtract a year
-        </button>
-
-        <button v-on:dblclick="subtract(10)">
-            Subtract 10 years
-        </button>
-
-        <button v-on:dblclick="add(10)">
-            ADD 10 years
-        </button>
-
-        <p>My age is {{ age }}</p>
-        
-            <div id="canvas" v-on:mousemove="updateXY" >
-            {{ x }}, {{ y }}
-        </div>
-
-        <br>
-        <!-- tutorial 6 -->
-        <a  @click.prevent="click" href="https://www.youtube.com/">Youtube</a>
-
-        <br><br>
-        <h1>Keyboard events</h1>
-        <label for="">Name</label>
-        <input type="text" name="" id="" @keyup.alt.enter="logName" >
-        <label for="">Age</label>
-        <input type="text" name="" id="" >
-
-
+        <!-- <p v-if="error"> We found some error </p>
+        <p v-else-if="success"> We found some success </p> -->
+        <p v-show="error">Toggle Error </p>
+        <p v-show="success">Toggle success </p>
     </div>
 
 
