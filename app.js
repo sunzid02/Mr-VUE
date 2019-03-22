@@ -14,6 +14,8 @@ new Vue({
         a: 0,
         b: 0,
         fruit: 20,
+        available:false,
+        nearby:false,
     },
 
     //all functions
@@ -64,6 +66,14 @@ new Vue({
     },
 
     computed:{
+
+        compClasses:function() {
+          return  {
+              available: this.available,
+              nearby: this.nearby
+          }
+        },
+
         addToA: function () {
             console.log('addToA has been called');
             return this.a + this.fruit;
