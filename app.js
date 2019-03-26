@@ -1,43 +1,29 @@
-var one = new Vue({
+Vue.component('greeting', {
+    
+    template: '<p>Hey there I am {{ name }}<button @click ="changeName"> change name</button></p>',
+    
+    data: function () {
+        return {
+            name: "ZIA"
+        }
+    },
+
+    methods:{
+        changeName: function(params) {
+            this.name = 'Mario'
+        }
+    }
+});
+
+
+new Vue({
     //elements
     el:"#vue-app-one",
-    
-    data:{
-        title: "Vue App one",
-    }, 
-
-    //all functions
-    methods:{
-
-    },
-
-    computed:{
-        greet: function() {
-            return "Hello from app 1";
-        }
-    }
 });
 
-var two = new Vue({
-    //elements
-    el:"#vue-app-two",
-    
-    data:{
-        title: "Vue App two",
-    }, 
-
-    //all functions
-    methods:{
-        changeTitle: function() {
-            one.title = "title change from vue-app-two";
-        }
-    },
-
-    computed:{
-        greet: function () {
-            return "Hello from app 2";
-        }    
-    }
+new Vue({
+    el: "#vue-app-two",
 });
 
-two.title = "changed from outside";
+
+// Components- reuse this code in different vue instances
