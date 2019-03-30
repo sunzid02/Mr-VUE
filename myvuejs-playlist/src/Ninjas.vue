@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>Hello ninja component</h2>
+        <h1>Hello ninja component</h1>
         <ul>
             <li v-for="ninja in ninjas"> {{ ninja }} </li>
         </ul>
@@ -16,3 +16,10 @@ export default {
   },
 }
 </script>
+
+
+<style scoped>
+  h1 {
+    color:coral
+  }
+</style>
