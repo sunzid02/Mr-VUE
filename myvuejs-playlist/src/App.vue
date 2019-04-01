@@ -1,7 +1,7 @@
 <template>
   <div>
       <app-header></app-header>
-      <ninja></ninja>
+        <ninja v-bind:ninjas="ninjas"></ninja>
       <app-footer></app-footer>
   </div>
 </template>
@@ -21,7 +21,38 @@ export default {
   },
   data () {
     return {
-
+              ninjas:[
+                  {
+                      name: 'ZIA',
+                      speciality:'Vue Components',
+                      show: false
+                  },
+                  {
+                      name: 'ZAYED',
+                      speciality:'HTML Wizardry',
+                      show: false
+                  },
+                  {
+                      name: 'ZUNAYED',
+                      speciality:'Click Events',
+                      show: false
+                  },
+                  {
+                      name: 'SHAHRIN',
+                      speciality:'Conditionals',
+                      show: false
+                  },
+                  {
+                      name: 'RUPOL',
+                      speciality:'Webpack',
+                      show: false
+                  },
+                  {
+                      name: 'RAKHAL',
+                      speciality:'Data Mining',
+                      show: false
+                  }
+              ]
     }
   },
 }
