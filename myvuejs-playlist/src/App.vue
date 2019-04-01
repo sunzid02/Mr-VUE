@@ -1,8 +1,11 @@
 <template>
   <div>
-      <app-header></app-header>
+      <app-header v-bind:title="title"></app-header>
         <ninja v-bind:ninjas="ninjas"></ninja>
-      <app-footer></app-footer>
+        <!-- <hr>
+        <ninja v-bind:ninjas="ninjas"></ninja> -->
+
+      <app-footer v-bind:title="title"></app-footer>
   </div>
 </template>
 
@@ -52,7 +55,8 @@ export default {
                       speciality:'Data Mining',
                       show: false
                   }
-              ]
+              ],
+              title: "Vue Ninjas "
     }
   },
 }
