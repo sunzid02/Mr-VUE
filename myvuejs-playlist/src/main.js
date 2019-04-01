@@ -1,9 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-// register globally
-import Ninjas from './Ninjas.vue'
-Vue.component('ninjas', Ninjas)
+// import Header from './components/Header.vue'
+// Vue.component('Header', Header)
 
 new Vue({
   el: '#app',
