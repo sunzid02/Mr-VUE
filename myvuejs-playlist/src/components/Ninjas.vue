@@ -13,42 +13,19 @@
 
 <script>
     export default {
-    data () {
-            return {
-                ninjas:[
-                    {
-                        name: 'ZIA',
-                        speciality:'Vue Components',
-                        show: false
-                    },
-                    {
-                        name: 'ZAYED',
-                        speciality:'HTML Wizardry',
-                        show: false
-                    },
-                    {
-                        name: 'ZUNAYED',
-                        speciality:'Click Events',
-                        show: false
-                    },
-                    {
-                        name: 'SHAHRIN',
-                        speciality:'Conditionals',
-                        show: false
-                    },
-                    {
-                        name: 'RUPOL',
-                        speciality:'Webpack',
-                        show: false
-                    },
-                    {
-                        name: 'RAKHAL',
-                        speciality:'Data Mining',
-                        show: false
-                    }
-                ]
+        //props are used for passing down datas from Root to other components        
+        props:{
+            ninjas:{
+                type: Array,
+                required: true
             }
         },
+        data () {
+                return {
+    
+                }
+            }
+            
     }
 </script>
 
