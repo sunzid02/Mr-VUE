@@ -18,7 +18,9 @@
             },
         methods:{
             changeTitle: function () {
-                this.title = "Mara Kha"
+                // this.title = "Mara Kha"
+                //generating events
+                this.$emit('changeTitle', 'Vue Wizards');
             }
         },    
     }
