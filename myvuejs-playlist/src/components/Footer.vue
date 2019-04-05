@@ -5,17 +5,26 @@
 </template>
 
 <script>
+import { bus } from '../main';
+
     export default {
-    props:{
-        title:{
-            type: String
-        }
-    },
-    data () {
-            return {
-                copyrightTitle: '@All right reserved to'
+        props:{
+            title:{
+                type: String
             }
         },
+        data () {
+                return {
+                    copyrightTitle: '@All right reserved to'
+                }
+            },
+
+        created(){
+            bus.$on('titleChangedByBus', (data) => {
+                this.title = data;
+            })
+        },
+
     }
 </script>
 
