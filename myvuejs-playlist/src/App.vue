@@ -1,36 +1,31 @@
 <template>
-  <div>
-
-    <keep-alive>
-      <component v-bind:is="component"></component>
-    </keep-alive>
-
-    <button @click="component='form-one' ">Show Form 1</button>
-    <button @click="component='form-two' ">Show Form 2</button>
- 
-  </div>
+    <div>
+      <add-blog></add-blog>
+    </div>
 </template>
 
 <script>
-  import formOne from './components/formOne.vue'
-  import formTwo from './components/formTwo.vue'
+// Imports
+import addBlog from './components/addBlog.vue';    // './' means current directory
 
-  export default {
-    components:{
-      'form-one': formOne,
-      'form-two': formTwo,
+export default {
+    components: {
+      'add-blog': addBlog,
     },
     data () {
-      return {
-        component: 'form-two',
-      }
-    },
+        return {
 
-    methods:{
- 
+        }
     },
-  }
+    methods: {
+
+    }
+}
 </script>
 
 <style>
+  body{
+    margin: 0;
+    font-family: 'Nunito SemiBold';
+  }
 </style>
