@@ -5,9 +5,10 @@ import App from './App.vue'
 // Vue.component('Header', Header)
 
 // creating event bus
-export const bus = new Vue();
+// export const bus = new Vue();
 
 new Vue({
   el: '#app',
   render: h => h(App)
 })
+ 
