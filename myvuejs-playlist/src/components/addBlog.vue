@@ -22,6 +22,11 @@
                 <input type="checkbox" value="pg" v-model="blog.categories">            
             </div>
 
+            <label>Author</label>
+            <select v-model="blog.author">
+                <option v-for="author in authors"> {{ author }} </option>
+            </select>    
+
         </form>
 
         <div id="preview">
@@ -35,6 +40,7 @@
                     <li v-for="category in blog.categories"> {{ category }} </li>
                 </ul>
             </p>
+            <p> Author: {{ blog.author }} </p>
         </div>
 
 
@@ -48,11 +54,15 @@ export default {
     },
     data () {
         return {
+
             blog:{
                 title:"",
                 content:"",
                 categories:[],
+                author:"",
             },
+
+            authors:['Zia', 'Zayed', 'Zunayed'],
         }
     },
     methods: {
