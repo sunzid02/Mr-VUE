@@ -41,11 +41,28 @@ export default {
     computed:{
         filteredBlogs: function (params) {
             return this.blogs.filter( (blog) => {
-                console.log(blog.title.match(this.search));
+                // console.log(blog.title.match(this.search));
                 
                 return blog.title.match(this.search);
             });
         }
+    },
+
+    //register filters locally
+    filters:{
+        'to-uppercase': function (value) {
+              return value.toUpperCase();
+        }
+    },
+
+    directives:{
+        
+        'rainbow':{
+            bind(el, binding, vnode){
+                el.style.color = "#" + Math.random().toString().slice(2, 8);
+            }        
+        },
+
     },
 }
 </script>
